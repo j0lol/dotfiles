@@ -1,0 +1,78 @@
+// ==UserScript==
+// @name          StackOverflow Official dark theme Improved
+// @namespace     http://userstyles.org
+// @description	  StackOverflow released a new dark theme, but it is not dark at all and it has very low contrast ratio. This theme is trying to fix these problems.
+// @author        lamka02sk
+// @homepage      https://userstyles.org/styles/181793
+// @include       http://stackoverflow.com/*
+// @include       https://stackoverflow.com/*
+// @include       http://*.stackoverflow.com/*
+// @include       https://*.stackoverflow.com/*
+// @run-at        document-start
+// @version       0.20200331182057
+// ==/UserScript==
+(function() {var css = [
+	"body {",
+	"    letter-spacing: .2px;",
+	"    background: #0d0d0d;",
+	"}",
+	"",
+	".post-tag {",
+	"    background: #242a33 !important;",
+	"}",
+	"",
+	".s-btn__primary {",
+	"    color: white !important;",
+	"}",
+	"",
+	"#wmd-input {",
+	"    background: #0d0d0d !important;",
+	"}",
+	"",
+	"p {",
+	"    color: #c4c4c4;",
+	"}",
+	"",
+	"#content a {",
+	"    color: #ceb8a1;",
+	"}",
+	"",
+	"#content a:hover {",
+	"    color: #c89862;",
+	"}",
+	"",
+	"pre, code {",
+	"    background: #111 !important;",
+	"}",
+	"",
+	".top-bar, #content {",
+	"    background: #171717;",
+	"}",
+	"",
+	".s-sidebarwidget__yellow {",
+	"    background: #201f13 !important;",
+	"}",
+	"",
+	".answer-votes.answered-accepted {",
+	"    background: #2b774d !important;",
+	"}"
+].join("\n");
+if (typeof GM_addStyle != "undefined") {
+	GM_addStyle(css);
+} else if (typeof PRO_addStyle != "undefined") {
+	PRO_addStyle(css);
+} else if (typeof addStyle != "undefined") {
+	addStyle(css);
+} else {
+	var node = document.createElement("style");
+	node.type = "text/css";
+	node.appendChild(document.createTextNode(css));
+	var heads = document.getElementsByTagName("head");
+	if (heads.length > 0) {
+		heads[0].appendChild(node);
+	} else {
+		// no head yet, stick it whereever
+		document.documentElement.appendChild(node);
+	}
+}
+})();
