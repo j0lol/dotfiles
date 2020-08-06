@@ -1,0 +1,6 @@
+super + e ; {q,w,d,e,shift+m,v,shift + e,m}
+	  {qutebrowser,konsole,dolphin,emacs,monodevelop,vscodium,qutebrowser --target window element.mint.lgbt ":enter-mode passthrough",mirage}
+super + semicolon ; {q}
+	  {wmctrl -c :ACTIVE:}
+super + r ; {r,w,s}
+	  {rofi -show drun -theme flamingo -showicons,rofi -show window -theme flamingo -showicons,rofi -show ssh -theme flamingo}
