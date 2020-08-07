@@ -2,9 +2,11 @@ source /etc/profile
 export EDITOR="emacs"
 export NODE_PATH=$NODE_PATH:$(npm root -g)
 export PATH=$PATH:/home/jo/.local/bin
-export BW_SESSION="90El6YJzm/+ikyJm69GOjGdcVvQFH4faOq+FhZqgoQtYjYinonL5l7HyTAnS6KJFPQOtDaz+vljFo5WM/4QnlQ=="
 
-alias vpsmatrix="ssh root@144.217.87.100"
+# dont use this anymore
+#source .bw_session
+
+
 alias vpswiki="ssh root@174.138.40.236"
 alias vim="nvim"
 alias vi="nvim"
@@ -54,3 +56,7 @@ export KDEHOME="${XDG_CONFIG_HOME:-$HOME/.config}/KDEHOME"
 
 
 alias dotconf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# tabtab source for electron-forge package
+# uninstall by removing these lines or running `tabtab uninstall electron-forge`
+[ -f /home/jo/.cache/yay/electron-forge/src/electron-forge-5.2.4/node_modules/tabtab/.completions/electron-forge.bash ] && . /home/jo/.cache/yay/electron-forge/src/electron-forge-5.2.4/node_modules/tabtab/.completions/electron-forge.bash
