@@ -2,8 +2,10 @@
 
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
+(setq fancy-splash-image "~/Documents/splash.png")
 
-(global-set-key (kbd "<XF86Tools>") 'shell-pop)
+(global-set-key (kbd "<XF86Tools>") '+vterm/toggle)
+(require 'shell-pop)
 
 (eval-after-load 'js2-mode
   '(add-hook 'js2-mode-hook
@@ -66,8 +68,8 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-one)
-(load-theme 'dracula t)
+(setq doom-theme 'doom-dracula)
+;; (load-theme 'doom-dracula t)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -102,9 +104,10 @@
 
 ;; Fun extra config stuff woo
 
-(setq-default
- tab-width 4                                      ; Set width for tabs
- )
+(setq default-tab-width 4)
+(setq c-basic-offset 4)
+(setq cperl-indent-level 4)
+(setq lua-indent-level 4)
 (setq undo-limit 80000000                         ; Raise undo-limit to 80Mb
       truncate-string-ellipsis "…")               ; Unicode ellispis are nicer than "...", and also save /precious/ space
 (unless (equal "Battery status not available"
