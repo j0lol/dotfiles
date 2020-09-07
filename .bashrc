@@ -7,7 +7,6 @@ export PATH=$PATH:/home/jo/.local/bin
 #source .bw_session
 
 
-alias vpswiki="ssh root@174.138.40.236"
 alias vim="nvim"
 alias vi="nvim"
 alias brc="source ~/.bashrc"
